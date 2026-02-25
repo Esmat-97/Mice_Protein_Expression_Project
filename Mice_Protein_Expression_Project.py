@@ -17,7 +17,7 @@ print(X.head())
 print(X.isna().sum().head())
 
 
-df = X.copy()
+df = X.copy() 
 #  Drop rows where DYRK1A_N is missing
 df = df.dropna(subset=["DYRK1A_N"])
 
@@ -44,6 +44,7 @@ plt.ylabel("Expression Level")
 plt.title("Protein Expression Across Mice (First Mouse)")
 plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
+plt.savefig("protein_expression_Parplot.svg") 
 plt.show()
 
 
